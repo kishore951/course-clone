@@ -9,6 +9,24 @@ export class AddCourseComponent implements OnInit {
 
   constructor() { }
 
+  courseTitle=""
+  courseDuration=""
+  courseDescription=""
+  courseDate=""
+  courseVenue=""
+
+
+  readViews=()=>{
+    let data ={
+      "courseTitle":this.courseTitle,
+      "courseDuration":this.courseDuration,
+      "courseDescription":this.courseDescription,
+      "courseDate":this.courseDate,
+      "courseVenue":this.courseVenue
+      
+    }
+    console.log(data)
+  }
   ngOnInit(): void {
   }
 
