@@ -7,6 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { ViewAllCourseComponent } from './view-all-course/view-all-course.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ApiComponent } from './api/api.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes:Routes=[
   {
@@ -21,12 +24,16 @@ const appRoutes:Routes=[
     AppComponent,
     NavbarComponent,
     AddCourseComponent,
-    ViewAllCourseComponent
+    ViewAllCourseComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
